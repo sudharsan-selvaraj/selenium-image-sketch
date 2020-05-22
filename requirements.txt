@@ -1,0 +1,5 @@
+numpy
+pypotrace
+pillow
+argparse
+scipy
