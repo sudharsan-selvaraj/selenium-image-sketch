@@ -30,8 +30,8 @@ driver = get_driver()
 body_element = driver.find_element_by_tag_name("body")
 sleep(3)
 
-diffX = -200
-diffY = 0
+diffX = -400
+diffY = -10
 first = 0
 
 print("{}{}".format("Total curves ", len(image_graph_path.curves)))
