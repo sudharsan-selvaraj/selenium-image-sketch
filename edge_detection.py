@@ -3,6 +3,7 @@ import numpy as np
 from scipy.ndimage.filters import convolve, gaussian_filter
 import potrace
 
+
 def canny_edge_detector(im, blur=2, Threshold=50):
     im = np.array(im, dtype=float)
     im2 = gaussian_filter(im, blur)
@@ -31,14 +32,15 @@ def canny_edge_detector(im, blur=2, Threshold=50):
                 if grad[r, c] <= grad[r - 1, c - 1] or grad[r, c] <= grad[r + 1, c + 1]:
                     gradSup[r, c] = 0
 
-    return (gradSup > Threshold)
+    return gradSup > Threshold
 
 
 def get_edge_detected_image(image_path = None):
     gray = imread(image_path, False, 'L')
     gray = canny_edge_detector(gray)
-    imsave('sobel.png', gray / np.amax(gray))
+    # imsave('sobel_converted.png', gray / np.amax(gray))
     return gray / np.amax(gray)
+
 
 def get_image_cuve_paths(image_path = None):
     im = get_edge_detected_image(image_path)
