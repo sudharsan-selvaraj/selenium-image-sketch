@@ -19,3 +19,10 @@ pyhton draw.py --image /path/to/any/image
 ```
 
 This will open the chrome browser ans start sketching the image provided.
+
+
+# Sample:
+![sample](sample_outputs/readme_tom_face.png)
+
+# Demo:
+Youtube: https://www.youtube.com/watch?v=vJRyGTcqZfM
