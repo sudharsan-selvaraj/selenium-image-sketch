@@ -20,6 +20,13 @@ def get_driver():
     options = webdriver.ChromeOptions()
     options.add_argument('--ignore-ssl-errors=yes')
     options.add_argument('--ignore-certificate-errors')
+     # Pass the argument 1 to allow and 2 to block
+    options.add_experimental_option("prefs", { \
+        "profile.default_content_setting_values.media_stream_mic": 2, 
+        "profile.default_content_setting_values.media_stream_camera": 2,
+        "profile.default_content_setting_values.geolocation": 2, 
+        "profile.default_content_setting_values.notifications": 2 
+    })
     driver = webdriver.Chrome(chrome_options=options,
                               executable_path="/Users/sudharsan/Documents/Applications/chromedriver")
     driver.get("https://vrobbi-nodedrawing.herokuapp.com/")
