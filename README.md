@@ -15,7 +15,7 @@ Algoritm courtesy: http://people.ece.cornell.edu/
 Enter the below command in terminal:
 
 ```bash
-pyhton draw.py --image /path/to/any/image
+python draw.py --image /path/to/any/image
 ```
 
 This will open the chrome browser ans start sketching the image provided.
